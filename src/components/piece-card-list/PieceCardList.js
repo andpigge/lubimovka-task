@@ -18,7 +18,7 @@ function PieceCardList() {
   const { result: pieceList } = useContext(PieceListContext);
 
   return (
-    <section className='piece'>
+    <section className='piece content_margin_left'>
       <ul className='piece__list'>
         {
           pieceList.map(piece => {

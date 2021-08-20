@@ -1,7 +1,6 @@
 .piece {
   max-width: 880px;
   width: 100%;
-  padding: 0 20px;
 }
 
 .piece__list {
@@ -10,12 +9,11 @@
   column-gap: 30px;
   row-gap: 30px;
   margin: 0;
-  margin-left: 100px;
 
   padding: 0;
   list-style: none;
 }
 
 .piece__item {
-  
+
 }

@@ -1,3 +1,26 @@
-/* .content {
-  background-color: #ECEBE8;
-} */
+.content {
+
+}
+
+.content_margin_left {
+  margin-left: 100px;
+}
+
+.content_margin_right {
+  margin-right: 100px;
+}
+
+.content_margin_bottom {
+  margin-bottom: 34px;
+}
+
+.piece-result {
+  display: flex;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .piece-result {
+    flex-direction: column;
+  }
+}
