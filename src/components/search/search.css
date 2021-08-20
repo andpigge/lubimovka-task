@@ -1,12 +1,16 @@
 .search {
   width: 100%;
-  padding: 0 20px;
+  padding: 190px 20px 0;
   box-sizing: border-box;
 }
 
 .search__title {
-  margin: 190px 118px 80px 118px;
+  margin: 0 100px 34px 100px;
+  max-width: 756px;
 
   font-family: 'Inter';
   font-weight: 400;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -0.01em;
 }

@@ -8,7 +8,7 @@ function Search() {
   return (
     <section className='search'>
       <h1 className='search__title'>
-        Поиск
+        По запросу «август» мы нашли
       </h1>
       <SearchForm />
     </section>

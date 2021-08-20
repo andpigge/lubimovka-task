@@ -3,7 +3,7 @@ import './searchForm.css';
 
 function SearchForm() {
   return (
-    <form className='searchForm'>
+    <form className='searchForm' name='searchForm' >
       <input type='text' className='searchForm__field-text' />
       <button type='submit' className='searchForm__button-submit'>
         Искать
