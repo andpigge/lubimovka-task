@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.search_margin-bottom {
+  margin-bottom: 65px;
+}
+
 .search__title {
   margin: 0 100px 34px 100px;
   max-width: 756px;

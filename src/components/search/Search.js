@@ -6,7 +6,7 @@ import SearchForm from './search-form/SearchForm';
 
 function Search() {
   return (
-    <section className='search'>
+    <section className='search search_margin-bottom'>
       <h1 className='search__title'>
         По запросу «август» мы нашли
       </h1>

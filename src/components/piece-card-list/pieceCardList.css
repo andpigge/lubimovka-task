@@ -1,0 +1,14 @@
+.piece {
+  max-width: 780px;
+  width: 100%;
+}
+
+.piece__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.piece__item {
+  
+}
