@@ -1,0 +1,62 @@
+.card-piece {
+
+}
+
+.card-piece__title {
+  min-height: 300px;
+  padding: 24px 31px 24px 24px;
+  box-sizing: border-box;
+
+  margin: 0;
+  margin-bottom: 16px;
+  background-color: #B7C09D;
+
+  font-family: 'Inter';
+  font-weight: 400;
+  color: #242424;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.card-piece__author-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-piece__firstName {
+  font-family: 'Inter';
+  font-weight: 400;
+  color: #242424;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+}
+
+.card-piece__lastName {
+  font-family: 'Inter';
+  font-weight: 400;
+  color: #242424;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+
+  margin-bottom: 4px;
+}
+
+.card-piece__city {
+  font-family: 'Inter';
+  font-weight: 300;
+  color: #242424;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.card-piece__year {
+  font-family: 'Inter';
+  font-weight: 300;
+  color: #242424;
+  font-size: 16px;
+  line-height: 22px;
+}

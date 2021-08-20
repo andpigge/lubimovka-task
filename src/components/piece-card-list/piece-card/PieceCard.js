@@ -13,8 +13,22 @@ function PieceCard({ piece }) {
   return (
     <div className='card-piece'>
       <h2 className='card-piece__title'>
-
+        { title }
       </h2>
+      <ul className='card-piece__author-list'>
+        <li className='card-piece__firstName'>
+          { author_firstName }
+        </li>
+        <li className='card-piece__lastName'>
+          { author_lastName }
+        </li>
+        <li className='card-piece__city'>
+          { city }
+        </li>
+        <li className='card-piece__year'>
+          { year }
+        </li>
+      </ul>
     </div>
   );
 }
