@@ -1,11 +1,12 @@
 import React from 'react';
 import './app.css';
 
+// Компоненты
+import Main from './main/Main';
+
 function App() {
   return (
-    <h1>
-      Работает
-    </h1>
+    <Main />
   );
 }
 
