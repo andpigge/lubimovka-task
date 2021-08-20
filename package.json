@@ -1,6 +1,9 @@
 {
+  "homepage": ".",
   "name": "lubimovka-task",
-  "version": "0.1.0",
+  "author": "Студент яндекс практикум",
+  "description": "Тестовая работа Любимовка",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,10 +15,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=80 && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
