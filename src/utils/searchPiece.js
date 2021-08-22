@@ -7,6 +7,9 @@ function useSearchPiece(pieceList, searchValue) {
       const searchLowerCase = searchValue.toLowerCase();
 
       const result = pieceLowerCase.includes(searchLowerCase);
+
+      console.log()
+
       return result;
     });
   }

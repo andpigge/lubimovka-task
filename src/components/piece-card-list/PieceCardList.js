@@ -7,8 +7,12 @@ import PieceCard from './piece-card/PieceCard';
 // Контекст
 import { PieceListContext } from '../../contexts/pieceListContext';
 
-// Фильтр пьес
+// Создание массива пьес
+import createPieceList from '../../utils/createPieceList';
+// Поиск пьес
 import searchPiece from '../../utils/searchPiece';
+// Фильтр по имеющим пьесам, для вывода в карточки
+import filterResultPiece from '../../utils/filterResultPiece';
 
 function PieceCardList({ searchValue }) {
   const { result } = useContext(PieceListContext);
@@ -20,30 +24,24 @@ function PieceCardList({ searchValue }) {
   // Пьесы для вывода в карточки
   const [ pieceListОutput, setPieceListОutput ] = useState([]);
 
-  // Вынестти в utils
-  // Создает массив пьес, заносит в state
   useEffect(() => {
-    const pieceList = result.map(piece => {
-      return piece.title;
-    });
+    // Принимает массив данных. Возвращает массив пьес
+    const getPieceList = createPieceList(result);
+    setPieceList(getPieceList);
+  }, [ searchValue, result ]);
 
-    setPieceList(pieceList);
-  }, [ result ]);
-
-  // Когда происходит submit, вызывается функция поиска
   useEffect(() => {
-    // Принимает массив названий пьес, и значения для поиска
+    // Принимает массив названий пьес и value пьесы для поиска.
+    // Возвращает найденный массив пьес, либо пустой массив.
     const resultFilter = searchPiece(pieceList, searchValue);
     setPieceListFilter(resultFilter);
-  }, [ searchValue, pieceList ]);
+  }, [ pieceList, result ]);
 
-  // Вынестти в utils
   useEffect(() => {
-    const a = result.filter(piece => {
-      console.log(pieceListFilter)
-      return pieceListFilter.includes(piece.title);
-    });
-    setPieceListОutput(a);
+    // Принимает массив данных и массив отфильтрованных пьес.
+    // Возвращает массив для вывода в карточки
+    const getPieceListFilter = filterResultPiece(result, pieceListFilter);
+    setPieceListОutput(getPieceListFilter);
   }, [ pieceListFilter, result ]);
 
   return (

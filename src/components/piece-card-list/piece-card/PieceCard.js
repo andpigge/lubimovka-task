@@ -3,9 +3,9 @@ import './pieceCard.css';
 
 function PieceCard({ piece }) {
   const {
+    title,
     author_firstName,
     author_lastName,
-    title,
     city,
     year
   } = piece;
