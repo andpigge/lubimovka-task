@@ -13,8 +13,10 @@ function SearchForm({ setSearchValue }) {
   const inputSearchRef = useRef();
   const handleSubmitSearch = (e) => {
     e.preventDefault();
+    const searchInputValue = inputSearchRef.current.value;
+
     // Значение input при submit. Передаю в state
-    setSearchValue(inputSearchRef.current.value)
+    setSearchValue(searchInputValue)
   }
 
   return (

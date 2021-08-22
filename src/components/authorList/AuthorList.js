@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import './authorList.css';
 
 // Компоненты
@@ -7,15 +7,30 @@ import Author from './author/Author';
 // Контекст
 import { PieceListContext } from '../../contexts/pieceListContext';
 
-function AuthorList() {
-  // Информация о авторах
-  // const [currentUser, setCurrentUser] = useState({
-  //   about: 'Загрузка...',
-  //   name: 'Пожалуйста подождите',
-  //   avatar: gifPreloader
-  // });
+// Поиск авторов
+import searchAuthor from '../../utils/searchAuthor';
 
-  const { result: authorList } = useContext(PieceListContext);
+function AuthorList({ searchValue, setSearchfound }) {
+  // Контекст
+  const { result } = useContext(PieceListContext);
+
+  const [ authorList, setAuthorList ] = useState([]);
+
+  useEffect(() => {
+    if (!searchValue) {
+      return;
+    }
+    const filterAuthor = searchAuthor(result, searchValue);
+    setAuthorList(filterAuthor);
+  }, [ searchValue, result ]);
+
+  useEffect(() => {
+    // Если запрос что-то нашел, в searchfound для Search будет true
+    if (authorList.length > 0) {
+      return setSearchfound(true);
+    }
+    setSearchfound(false);
+  }, [ authorList, setSearchfound ]);
 
   return (
     <section className='author-piece content_margin_right'>

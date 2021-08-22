@@ -1,21 +1,15 @@
-function useSearchPiece(pieceList, searchValue) {
-  // Должен возвращать новый массив
-  if (searchValue) {
-    // Поиск
-    return pieceList.filter(piece => {
-      const pieceLowerCase = piece.toLowerCase();
-      const searchLowerCase = searchValue.toLowerCase();
+function useSearchPiece(result, searchValue) {
+  return result.filter(piece => {
+    const pieceLowerCase = piece.title.toLowerCase();
+    const searchLowerCase = searchValue.toLowerCase();
 
-      // Оставлю. Возможно в будущем пригодится посмотреть в чем была ошибка
-      // const result = pieceLowerCase.includes(searchLowerCase);
-
-      const result = pieceLowerCase.startsWith(searchLowerCase)
-
-      return result;
-    });
-  }
-
-  return [];
+    // Пользователь явно хотел увидеть все слова начинающие, на определенную букву.
+    // Если ввел только одну букву
+    if (searchValue.length === 1) {
+      return pieceLowerCase.startsWith(searchLowerCase);
+    }
+    return pieceLowerCase.includes(searchLowerCase);
+  });
 }
 
 export default useSearchPiece;

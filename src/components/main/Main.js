@@ -9,14 +9,16 @@ import AuthorList from '../authorList/AuthorList';
 function Main() {
   // Поднял state
   // Значения поля с поиском, при submit
-  const [searchValue, setSearchValue] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
+  // Нашелся ли запрос
+  const [ searchfound, setSearchfound ] = useState(false);
 
   return (
     <main className='content'>
-      <Search setSearchValue={ setSearchValue } searchValue={ searchValue } />
+      <Search setSearchValue={ setSearchValue } searchValue={ searchValue } searchfound={ searchfound } />
       <section className='piece-result'>
-        <PieceCardList searchValue={ searchValue } />
-        <AuthorList />
+        <PieceCardList searchValue={ searchValue } setSearchfound={ setSearchfound }  />
+        <AuthorList searchValue={ searchValue } setSearchfound={ setSearchfound } />
       </section>
     </main>
   );

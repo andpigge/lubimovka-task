@@ -16,6 +16,7 @@
   line-height: 23px;
   font-weight: 300;
   color: #242424;
+  background-color: inherit;
 }
 
 .searchForm__button-submit {
