@@ -11,7 +11,7 @@ function Main() {
   // Значения поля с поиском, при submit
   const [searchValue, setSearchValue] = useState('');
   // Нашелся ли запрос
-  const [ searchfound, setSearchfound ] = useState(false);
+  const [ searchfound, setSearchfound ] = useState(null);
 
   return (
     <main className='content'>

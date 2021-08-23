@@ -21,8 +21,10 @@ function PieceCardList({ searchValue, setSearchfound }) {
     if (!searchValue) {
       return [];
     }
+    // Принимает массив данных и значение поиска.
+    // Возвращает найденных авторов по имени и фамилии.
     const filterPiece = searchPiece(result, searchValue);
-    setPieceList(filterPiece)
+    setPieceList(filterPiece);
   }, [ searchValue, result ]);
 
   useEffect(() => {
